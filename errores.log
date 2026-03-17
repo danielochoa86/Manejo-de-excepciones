@@ -11,3 +11,11 @@
 2026-03-15T19:43:38.761546900 - MaximoPrestamosException - El usuario ya alcanzó el máximo de préstamos permitidos (3)
 2026-03-15T19:52:36.843707600 - MaterialNoEncontradoException - Material no encontrado
 2026-03-15T20:01:37.938370400 - MaterialNoEncontradoException - Material no encontrado
+2026-03-16T17:20:50.884009600 - MaterialNoEncontradoException - Material no encontrado
+2026-03-16T17:21:02.252433100 - MaterialNoEncontradoException - Material no encontrado
+2026-03-16T17:21:08.966318200 - MaterialNoEncontradoException - Material no encontrado
+2026-03-16T17:31:23.232592600 - MaterialNoDisponibleException - Material ya prestado
+2026-03-16T17:46:56.092362300 - MaterialNoEncontradoException - Material no encontrado
+2026-03-16T17:50:03.761611600 - MaterialNoEncontradoException - Material no encontrado
+2026-03-16T17:50:10.273916300 - MaterialNoEncontradoException - Material no encontrado
+2026-03-16T17:50:20.065614500 - MaterialNoEncontradoException - Material no encontrado

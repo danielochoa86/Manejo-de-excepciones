@@ -20,12 +20,7 @@ public class Usuario {
     public List<Material> getPrestamos() { return List.copyOf(prestamos); }
 
     public Material buscarMaterial(int id){
-        for (Material m : prestamos){
-            if (m.getId() == id){
-                return m;
-            }
-        }
-        return null;
+        return prestamos.get(id);
     }
 
     //métodos

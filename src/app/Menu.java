@@ -1,6 +1,8 @@
 package app;
 
 import exceptions.BibliotecaException;
+import exceptions.MaterialNoDisponibleException;
+import exceptions.MaterialNoEncontradoException;
 import model.*;
 import servicio.Biblioteca;
 import util.registroErrores;
@@ -85,7 +87,7 @@ public class Menu {
             }
             case 2 -> {
                 String num = userInput("Número de revista");
-                Revista revista = new Revista(m_counter,titulo,num);
+                Revista revista = new Revista(m_counter++,titulo,num);
                 biblioteca.registrarMaterial(revista);
                 System.out.println("¡Revista registrada!");
                 System.out.println(revista);
@@ -145,9 +147,13 @@ public class Menu {
                         " - " + materials.get(i).getClass().getSimpleName());
             }
             int material_id = leerEnteroMensj("Ingrese su seleccion");
-            Material material = user.buscarMaterial(material_id);
+            Material material = user.buscarMaterial(material_id-1);
 
-            biblioteca.devolverMaterial(user.getId(),material.getId());
+            if (material == null){
+                throw new MaterialNoEncontradoException("Material no encontrado");
+            }
+
+            biblioteca.devolverMaterial(user.getId(),material_id-1);
             System.out.println(user.getNombre() + " ha devuelto " + material.getTitulo());
         } catch (BibliotecaException e){
             System.out.println(e.getMessage());
